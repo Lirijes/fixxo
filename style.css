@@ -218,7 +218,7 @@
 
 .top-menu {
     background-color: var(--color-gray-2);
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
 }
 
     .top-menu .container {
@@ -278,3 +278,100 @@
     grid-template-rows: 1fr, 1fr; 
     justify-items: center;
 }
+
+/* -------------------- pamelas top picks & conscious -------------------- */
+.top-pick-conscious {
+    margin-top: 4rem;
+}
+
+    .top-pick-conscious .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .top-pick-conscious div.img-top-pick {   /* this is from (https://stackoverflow.com/questions/10829675/how-to-put-an-image-in-div-with-css) */
+            position: relative;
+            width: 633px;
+            height: 314px;
+            background-image:url('images/pamelas-top-picks.svg');
+        }
+
+            .top-pick-conscious .img-top-pick h1 {
+                position: absolute;
+                left: 57%;
+                top: 30%;
+                font-family: var(--font-poppins);
+                font-weight: var(--font-weight-bold);
+                font-size: 35px;
+                color: var(--color-white);
+            }
+
+            .top-pick-conscious .img-top-pick button {
+                position: absolute;
+                left: 58%;
+                top: 67%;
+                width: 9rem;
+                height: 3rem;
+                background-color: var(--color-theme-dark);
+                transition: 0.3s ease-in-out;
+            }
+                .top-pick-conscious .img-top-pick button:hover {
+                    background-color: var(--color-white);
+                    color: var(--color-theme);
+                }
+
+                
+        .top-pick-conscious div.img-conscious {
+            position: relative;
+            width: 633px;
+            height: 314px;
+            background-image:url('images/conscious.svg');
+        }
+
+            .top-pick-conscious div.img-conscious h1 {
+                position: absolute;
+                left: 7%;
+                right: 70%;
+                top: 30%;
+                font-family: var(--font-poppins);
+                font-weight: var(--font-weight-bold);
+                font-size: 35px;
+                color: var(--color-theme-dark);
+            }
+
+            .top-pick-conscious div.img-conscious .btn-red {
+                position: absolute;
+                left: 8%;
+                top: 67%;
+                width: 9rem;
+                height: 3rem;
+                background-color: var(--color-white);
+                color: var(--color-theme-dark);
+                transition: 0.3s ease-in-out;
+            }
+
+                .top-pick-conscious div.img-conscious .btn-red::before,
+                .top-pick-conscious div.img-conscious .btn-red::after {     
+                    position: absolute;
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                }
+                .top-pick-conscious div.img-conscious .btn-red::before {
+                    left: 0.3rem;
+                    top: 0.3rem;
+                    border-left: 2px solid black;
+                    border-top: 2px solid black;
+                }
+                .top-pick-conscious div.img-conscious .btn-red::after {
+                    right: 0.3rem;
+                    bottom: 0.3rem;
+                    border-right: 2px solid black;
+                    border-bottom: 2px solid black;
+                }
+
+                .top-pick-conscious div.img-conscious button:hover {
+                    background-color: var(--color-theme-dark);
+                    color: var(--color-white);
+                }
