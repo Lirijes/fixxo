@@ -21,6 +21,7 @@
 /* -------------------- general ----------------------- */
 
 .btn-light {
+    position: relative;
     background-color: var(--color-white);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--color-gray-1);
@@ -32,6 +33,13 @@
         .btn-light:hover a {
             color: var(--color-theme);
         }
+
+.bg-theme {
+    background-color: var(--color-theme);
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-regular);
+    font-size: 11px;
+}
 
 .btn-red {
     position: relative;
@@ -73,6 +81,11 @@
 .fa-star {
     color: var(--color-theme);
     margin-bottom: 0.7rem;
+}
+
+a {
+    font-style: none;
+    color: var(--color-theme);
 }
 
 /* ------------------ card ------------------------ */
@@ -172,8 +185,10 @@
 
 
 /* ------------------ menu bar ---------------------- */
-.menu-bar {
+.gradinent-gray {
     background-color: var(--color-gray-2);
+}
+.menu-bar {
     color: var(--color-dark);
     height: 90px;
 }
@@ -206,6 +221,11 @@
                 color: var(--color-theme-dark);
             }
                 .menu-bar .category-links a:hover {
+                    color: var(--color-theme);
+                }
+
+                .menu-bar .category-links a:active,
+                .menu-bar .category-links .__active {
                     color: var(--color-theme);
                 }
 
@@ -282,6 +302,7 @@
 /* -------------------- pamelas top picks & conscious -------------------- */
 .top-pick-conscious {
     margin-top: 4rem;
+    margin-bottom: 6rem;
 }
 
     .top-pick-conscious .container {
@@ -374,4 +395,245 @@
                 .top-pick-conscious div.img-conscious button:hover {
                     background-color: var(--color-theme-dark);
                     color: var(--color-white);
+                }
+
+/* ---------- flash sale left & right ---------------- */
+.flash-sale-left,
+.flash-sale-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.flash-sale-box {
+    position: relative;
+    background-color: var(--color-gray-1);
+}
+
+    .flash-sale-box h1 {
+        position: absolute;
+        left: 25%;
+        top: 40%;
+        font-family: var(--font-poppins);
+        font-weight: var(--font-weight-bold);
+        font-size: 45px;
+        color: var(--color-white);
+    }
+
+    .flash-sale-box .btn-red {
+        position: absolute;
+        left: 39%;
+        top: 50%;
+        width: 9rem;
+        height: 3rem;
+        background-color: var(--color-white);
+        color: var(--color-theme-dark);
+        transition: 0.3s ease-in-out;
+    }
+        .flash-sale-box .btn-red::before,
+        .flash-sale-box .btn-red::after {     
+            position: absolute;
+            content: '';
+            width: 16px;
+            height: 16px;
+        }
+        .flash-sale-box .btn-red::before {
+            left: 0.3rem;
+            top: 0.3rem;
+            border-left: 2px solid black;
+            border-top: 2px solid black;
+        }
+        .flash-sale-box .btn-red::after {
+            right: 0.3rem;
+            bottom: 0.3rem;
+            border-right: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+            .flash-sale-box button:hover {
+                background-color: var(--color-theme-dark);
+                color: var(--color-white);
+            }
+
+.flash-sale-right-boxes {
+    margin-left: 5rem;
+}
+
+/* ----------------- support --------------------- */
+    .bottom-menu .container {
+        border-top: 1px solid var(--color-gray-1);
+        display: flex;
+        justify-content: space-around;
+        width: 1110px;
+        margin-bottom: 3rem;
+    }
+
+        .bottom-menu .support {
+            flex-direction: column;
+            text-align: center;
+            width: 255px;
+            height: 181px;
+            margin-top: 4rem;
+        }
+
+            .bottom-menu .support h1 {
+                font-family: var(--font-poppins);
+                font-weight: var(--font-weight-bold);
+                font-size: 20px;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .bottom-menu .support p {
+                font-family: var(--font-poppins);
+                font-weight: var(--font-weight-regular);
+                font-size: 16px;
+            }
+
+/* --------------- copyright -------------- */
+.copyright {
+    margin-top: 7rem;
+    border-top: 1px solid var(--color-gray-1);
+    background-color: var(--color-gray-2);
+    height: 120px;
+}
+
+    .copyright .container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+        .copyright .social-media {
+            margin-bottom: 0.6rem;
+        }
+
+            .copyright .social-media a {
+                color: var(--color-theme-dark);
+                margin-left: 1rem;
+            }
+
+        .copyright p {
+            font-family: var(--font-poppins);
+            font-weight: var(--font-weight-regular);
+        }
+
+
+
+/* ----------------------- CONTACT PAGE -------------------------- */
+.breadcrumb .container {
+    max-width: 1000px;
+}
+
+    .breadcrumb .breadcrumb-list {
+        list-style: none;
+        padding: 0;
+        margin: 50px 0 30px 0;
+        color: var(--color-theme);
+    }
+
+        .breadcrumb .breadcrumb-list li {
+            display: inline-block;
+            font-family: var(--font-poppins);
+            font-weight: var(--font-weight-regular);
+        }
+        .breadcrumb .breadcrumb-list li+li:before {
+            content: ">\00a0";
+            color: var(--color-theme-dark);
+        }
+
+        .breadcrumb .breadcrumb-list li a {
+            color: var(--color-theme-dark);
+        }
+            .breadcrumb .breadcrumb-list li a:hover {
+                color: var(--color-theme);
+            }
+
+    .map {
+        margin-bottom: 70px;
+    }
+
+        .map .google-map {
+            border: 0; 
+            width: 100%; 
+            height: 380px;
+        }
+
+
+.contact-us {
+    margin-top: 60px;
+}
+        
+    .contact-us .container {
+        max-width: 1000px;
+    }
+        
+        .contact-us h2 {
+            font-family: var(--font-poppins);
+            font-weight: var(--font-weight-medium);
+            font-size: 18px;
+            margin-bottom: 1.4rem;
+        }
+
+        .contact-us form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-us form .errorMessage {
+            margin-top: 5px;
+            color: var(--color-theme);
+            font-size: 0.8em;
+        }
+
+        .contact-us form .error {
+            color: var(--color-theme);
+            border: 1px solid var(--color-theme);
+        }
+
+            .contact-us form input {
+                width: 100%;
+                padding: 18px 20px;
+                border: 1px solid var(--color-gray-1);
+            }
+
+            .contact-us form .textarea {
+                grid-column: 1 / -1;
+            }
+
+                .contact-us form textarea {
+                    width: 100%;
+                    padding: 18px 20px;
+                    border: 1px solid var(--color-gray-1);
+                    height: 140px;
+                    resize: none;
+                }
+
+            .contact-us button {
+                width: 210px;
+            }
+
+
+            
+.contact-us {
+
+}
+    .contact-us .container {
+        
+    }
+
+        .contacts-us .card-us-card {
+            
+        }
+
+            .contact-us .card-body {
+
+            }
+            
+                .contact-us .nameMail {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                 }
